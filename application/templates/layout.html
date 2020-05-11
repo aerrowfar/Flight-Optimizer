@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flighty - Home Page</title>
+    <link rel="stylesheet" href="static/css/main.css"/>
+</head>
+<body>
+
+
+<div class="container">
+    {% include "includes/nav.html" %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-danger">
+                    <p>{{ message }}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+{% block form %}
+{% endblock %}
+
+</body>
+</html>

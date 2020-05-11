@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1>Flighty Flight Optimizer</h1>
+        <h3>Enter your departing city, departure date, and up to 4 cities you would like to see.</h3>
+        </div>
+</div>
+{% endblock %}
+
+{% block form %}
+
+<h1> {{title}}</h1>
+
+<div class ="row">
+    <div class = "col-md-6 offset-md-3">
+        <h3></h3>
+        <form name = "itinery" action= "" method="post" novalidate>
+            {{form.hidden_tag()}}
+            <p>
+                {{form.dep_city.label}}
+                {{form.dep_city(size=35)}}
+                {% for error in form.dep_city.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{form.dep_date.label}}
+                {{form.dep_date(size=35)}}
+                {% for error in form.dep_date.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.des1.label}}
+                {{form.des1(size=20)}}
+                {% for error in form.des1.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.dur1.label}}
+                {{form.dur1(size=2)}}
+                {% for error in form.dur1.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.des2.label}}
+                {{form.des2(size=20)}}
+                {% for error in form.des2.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.dur2.label}}
+                {{form.dur2(size=2)}}
+                {% for error in form.dur2.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.des3.label}}
+                {{form.des3(size=20)}}
+                {% for error in form.des3.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.dur3.label}}
+                {{form.dur3(size=2)}}
+                {% for error in form.dur3.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.des4.label}}
+                {{form.des4(size=20)}}
+                {% for error in form.des4.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+            <p>
+                {{form.dur4.label}}
+                {{form.dur4(size=2)}}
+                {% for error in form.dur4.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{form.submit()}}
+            </p>
+
+        </form>
+    </div>
+</div>
+<!-- 
+<form action="/results.html">
+    <div class="container">
+        <hr>
+
+        <label for="departure"><b>Departure City</b></label>
+        <input type="text" placeholder="Enter your departure city" name="departure" required>
+
+        <label for="date"><b>Departure Date</b></label>
+        <input type="date" placeholder="Enter your departure date" name="date" required>
+
+        <hr>
+
+        <label for="destionation1"><b>Destination One</b></label>
+        <input type="text" placeholder="Enter your destionation city" name="destionation1" required>
+
+        <label for="date"><b>Duration of Stay</b></label>
+        <input type="number" placeholder="How many nights" name="duration1" required>
+
+        <hr>
+
+        <label for="destionation2"><b>Destination Two</b></label>
+        <input type="text" placeholder="Enter your destionation city" name="destionation2" required>
+
+        <label for="date"><b>Duration of Stay</b></label>
+        <input type="number" placeholder="How many nights" name="duration2" required>
+
+        <hr>
+
+        <label for="destionation3"><b>Destination Three</b></label>
+        <input type="text" placeholder="Enter your destionation city" name="destionation3">
+
+        <label for="date"><b>Duration of Stay</b></label>
+        <input type="number" placeholder="How many nights" name="duration3">
+
+        <hr>
+
+        <label for="destionation4"><b>Destination Four</b></label>
+        <input type="text" placeholder="Enter your destionation city" name="destionation4">
+
+        <label for="date"><b>Duration of Stay</b></label>
+        <input type="number" placeholder="How many nights" name="duration4">
+
+        <hr>
+        <button type="submit" class="registerbtn">Generate</button>
+
+
+    </div>
+</form>
+-->
+{% endblock %}
+
