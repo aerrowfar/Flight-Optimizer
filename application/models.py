@@ -20,3 +20,24 @@ class Route(db.Document):
     carrier = db.StringField()
     flightId = db.IntField()
     cost = db.IntField()
+
+class dbtrip(db.Document):
+    homeLocation = db.StringField()
+    earliestStart = db.DateTimeField()
+    latestStart = db.DateTimeField()
+    latestReturn = db.DateTimeField()
+    des1 = db.StringField()
+    min_stay1 = db.IntField()
+    max_stay1 = db.IntField()
+    des2 = db.StringField()
+    min_stay2 = db.IntField()
+    max_stay2 = db.IntField()
+    des3 = db.StringField()
+    min_stay3 = db.IntField()
+    max_stay3 = db.IntField()
+    des4 = db.StringField()
+    min_stay4 = db.IntField()
+    max_stay4 = db.IntField()
+
+class TripDoc (db.DynamicDocument):
+    pass

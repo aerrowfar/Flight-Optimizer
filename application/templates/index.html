@@ -19,20 +19,37 @@
         <form name = "itinery" action= "" method="post" novalidate>
             {{form.hidden_tag()}}
             <p>
-                {{form.dep_city.label}}
-                {{form.dep_city(size=35)}}
-                {% for error in form.dep_city.errors %}
+                {{form.home_location.label}}
+                {{form.home_location(size=35)}}
+                {% for error in form.home_location.errors %}
                     <span class="error-message">{{ error }} </span>
                 {% endfor %}
             </p>
 
             <p>
-                {{form.dep_date.label}}
-                {{form.dep_date(size=35)}}
-                {% for error in form.dep_date.errors %}
+                {{form.earliest_dep_date.label}}
+                {{form.earliest_dep_date(size=35)}}
+                {% for error in form.earliest_dep_date.errors %}
                     <span class="error-message">{{ error }} </span>
                 {% endfor %}
             </p>
+
+            <p>
+                {{form.latest_dep_date.label}}
+                {{form.latest_dep_date(size=35)}}
+                {% for error in form.latest_dep_date.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{form.latest_return_date.label}}
+                {{form.latest_return_date(size=35)}}
+                {% for error in form.latest_return_date.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+
             <p>
                 {{form.des1.label}}
                 {{form.des1(size=20)}}
@@ -41,12 +58,21 @@
                 {% endfor %}
             </p>
             <p>
-                {{form.dur1.label}}
-                {{form.dur1(size=2)}}
-                {% for error in form.dur1.errors %}
+                {{form.min_stay1.label}}
+                {{form.min_stay1(size=2)}}
+                {% for error in form.min_stay1.errors %}
                     <span class="error-message">{{ error }} </span>
                 {% endfor %}
             </p>
+
+            <p>
+                {{form.max_stay1.label}}
+                {{form.max_stay1(size=2)}}
+                {% for error in form.max_stay1.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+
             <p>
                 {{form.des2.label}}
                 {{form.des2(size=20)}}
@@ -54,13 +80,23 @@
                     <span class="error-message">{{ error }} </span>
                 {% endfor %}
             </p>
+            
             <p>
-                {{form.dur2.label}}
-                {{form.dur2(size=2)}}
-                {% for error in form.dur2.errors %}
+                {{form.min_stay2.label}}
+                {{form.min_stay2(size=2)}}
+                {% for error in form.min_stay2.errors %}
                     <span class="error-message">{{ error }} </span>
                 {% endfor %}
             </p>
+
+            <p>
+                {{form.max_stay2.label}}
+                {{form.max_stay2(size=2)}}
+                {% for error in form.max_stay2.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+
             <p>
                 {{form.des3.label}}
                 {{form.des3(size=20)}}
@@ -68,13 +104,23 @@
                     <span class="error-message">{{ error }} </span>
                 {% endfor %}
             </p>
+           
             <p>
-                {{form.dur3.label}}
-                {{form.dur3(size=2)}}
-                {% for error in form.dur3.errors %}
+                {{form.min_stay3.label}}
+                {{form.min_stay3(size=2)}}
+                {% for error in form.min_stay3.errors %}
                     <span class="error-message">{{ error }} </span>
                 {% endfor %}
             </p>
+
+            <p>
+                {{form.max_stay3.label}}
+                {{form.max_stay3(size=2)}}
+                {% for error in form.max_stay3.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+
             <p>
                 {{form.des4.label}}
                 {{form.des4(size=20)}}
@@ -82,10 +128,19 @@
                     <span class="error-message">{{ error }} </span>
                 {% endfor %}
             </p>
+            
             <p>
-                {{form.dur4.label}}
-                {{form.dur4(size=2)}}
-                {% for error in form.dur4.errors %}
+                {{form.min_stay4.label}}
+                {{form.min_stay4(size=2)}}
+                {% for error in form.min_stay4.errors %}
+                    <span class="error-message">{{ error }} </span>
+                {% endfor %}
+            </p>
+
+            <p>
+                {{form.max_stay4.label}}
+                {{form.max_stay4(size=2)}}
+                {% for error in form.max_stay4.errors %}
                     <span class="error-message">{{ error }} </span>
                 {% endfor %}
             </p>
