@@ -7,7 +7,7 @@
         <h3>Total price: {{flights["total_price"] }}</h3>
         </div>
 </div>
-<!-- here im trying to display the API result as a table because but something is not working-->
+<!-- Display the API result as a table -->
 {% for row in flights %}
     {{row[0]}}
     <ul>
@@ -16,58 +16,6 @@
         {% endfor %}
     </ul>
 {% endfor %}
-<!-- 
-    YOU CAN IGNORE EVERYTHING FROM HERE BELOW. 
-<div style= "color:red">
-    <p>
-        {% for result in flights %}
-            {{ result['Carrier'] }}
-        {% endfor %}
-    </p>
-</div>
--->
-<!-- 
-<div>
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th scope="col">Flight ID</th>
-            <th scope="col">Carrier</th>
-            <th scope="col">Departure Date</th>
-            <th scope="col">Departure Time</th>
-            <th scope="col">Cost</th>
-            <th scope="col">Buy</th>
-        </tr>
-        </thead>
-        <tbody>
-        
-       
-        
-       {% for flight in flights %}
-        <tr>
-           <td scope="row">{{ flight["dep_city"]}}</td>
-           <td>{{ flight["dep_date"]}}</td>
-           <td>{{ flight["des1"]}}</td>
-           <td>{{ flight["dur1"]}}</td>
-           <td>{{ flight["des2"]}}</td>
-           <td>{{ flight["dur2"]}}</td>
-           <td>
-               <form action="/purchase" method = "POST">
-                    Follow this format to send relevant info to purchase a flight 
-                   <input type="hidden" name="flightID" value="{{flight['dep_date']}}">
-                   <button> Purchase</button>
-               </form>
-           </td>
 
-       </tr>
-       {% endfor %}
-    
-        
-        
-        </tbody>
-    </table>
-</div>
-
---> 
 {% endblock %}
 

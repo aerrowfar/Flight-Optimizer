@@ -1,3 +1,5 @@
+# NOT WRITTEN BY ME, API.PY IS THE WORK OF MY CLASSMATE. IM INCLUDING ONLY FOR SAKE OF COMPLETION. 
+
 import requests
 import json
 import time
